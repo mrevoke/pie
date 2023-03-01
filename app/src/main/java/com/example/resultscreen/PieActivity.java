@@ -19,15 +19,16 @@ public class PieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie);
+
         pieChart  = findViewById(R.id.pieChart);
         ArrayList<PieEntry> visitors = new ArrayList<>();
-        visitors.add(new PieEntry(8,"Correct"));
-        visitors.add(new PieEntry(1,"Partially Correct"));
-        visitors.add(new PieEntry(1,"Wrong"));
+        visitors.add(new PieEntry(8,"Wrong"));
+
+        visitors.add(new PieEntry(1,"Correct"));
 
 
         PieDataSet pieDataSet = new PieDataSet(visitors,"");
-        pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        pieDataSet.setColors(ColorTemplate.PASTEL_COLORS);
         pieDataSet.setValueTextColor(Color.BLACK);
         pieDataSet.setValueTextSize(16f);
 
